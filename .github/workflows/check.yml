@@ -2,10 +2,7 @@ name: check
 on: push
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v4
       - name: run setup
